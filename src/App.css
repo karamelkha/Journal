@@ -1,0 +1,13 @@
+body {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #181818;
+  padding: 50px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(250px, 25%) 1fr;
+  padding: 30px;
+}

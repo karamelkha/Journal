@@ -1,0 +1,16 @@
+.card-button {
+    font-family: "Source Sans Pro";
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.03);
+    display: block;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease-in-out;
+    text-align: start;
+    width: 100%;
+}
+
+.card-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
