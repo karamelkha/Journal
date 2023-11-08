@@ -1,13 +1,25 @@
 body {
-  width: 100%;
-  max-width: 1280px;
+  width: 100vw;
+  max-width: 1240px;
   margin: 0 auto;
-  background: #181818;
-  padding: 50px;
+  background-image: url("./assets/bg.svg");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Wix Madefor Display', sans-serif;
+  font-weight: 700;
 }
 
 .app {
+  padding: 0px 80px;
+}
+
+
+.layout {
+  z-index: 20;
+  position: relative;
   display: grid;
+  gap: 30px;
   grid-template-columns: minmax(250px, 25%) 1fr;
-  padding: 30px;
 }

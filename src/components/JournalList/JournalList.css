@@ -1,5 +1,31 @@
 .journal-list{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
+}
+
+.journal-list__empty {
+    color: #ff9698;
+    font-size: 20px;
+    text-align: center;
+}
+
+.pomp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.pomp img {
+    width: 34px;
+}
+
+.pom-r {
+    transform: scaleX(-1);
+    translate: 10px;
+}
+
+.pom-left {
+    translate: -10px;
 }

@@ -1,10 +1,10 @@
-import "./Header.css"
+import  styles from "./Header.module.css"
 
 function Header() {
 
     return (
       <>
-      <img className="header" src="./logo.svg" alt="logo"/>
+      <h1 className={styles.header}>Мои заметки</h1>
       </>
     )
 }

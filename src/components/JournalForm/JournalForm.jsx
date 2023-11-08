@@ -1,22 +1,52 @@
-import "./JournalForm.css"
+import styles from "./JournalForm.module.css"
 import Button from "./../Button/Button"
+import { useState } from "react";
+import cn from "classnames";
 
-function JournalForm( {onSubmit} ) {
+function JournalForm({ onSubmit }) {
+
+    const [formValidState, setFormValidState] = useState({
+        title: true,
+        text: true,
+        date: true
+    })
 
     const addJournalItem = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
         const formProps = Object.fromEntries(formData);
+        let isFormValid = true;
+        if (!formProps.title.trim().length) {
+            setFormValidState(state => ({ ...state, title: false }))
+            isFormValid = false
+        } else {
+            setFormValidState(state=>({...state, title: true}))
+        }
+        if (!formProps.text.trim().length) {
+            setFormValidState(state => ({ ...state, text: false }))
+            isFormValid = false
+        }
+        else {
+            setFormValidState(state=>({...state, text: true}))
+        }
+        if (!formProps.date) {
+            setFormValidState(state => ({ ...state, date: false }))
+            isFormValid = false
+        }
+        else {
+            setFormValidState(state=>({...state, date: true}))
+        }
+        if (!isFormValid) { return }
         onSubmit(formProps);
     }
 
     return (
-        <form className="journal-form" onSubmit={addJournalItem}>
-            <input type='text' name="title" />
-            <input type="date" name="date" />
-            <input type='text' name="tag"  />
-            <textarea name="text" id="" cols="30" rows="10"></textarea>
-            <Button text="Сохранить" onClick={()=>{console.log('сохранить клик')}}/>
+        <form className={styles['journal-form']}  onSubmit={addJournalItem}>
+            <input type='text' name="title" placeholder="Заголовок" className={cn(styles['input'], styles['invalid'])} />
+            <input type="date" name="date" className={`${styles['input']} ${formValidState.date ? '' : styles['invalid']}`}  />
+            <input type='text' name="tag" placeholder="Теги" />
+            <textarea name="text" id="" cols="30" rows="10" placeholder="Дорогой дневник, мне не подобрать слов, чтобы описать боль и унижение, которое я ..." className={`${styles['input']} ${formValidState.text ? '' : styles['invalid']}`} ></textarea>
+            <Button text="Сохранить" />
         </form>
     )
 }

@@ -1,12 +1,23 @@
 import "./JournalList.css"
 import CardButton from "../CardButton/CardButton";
 import JournalItem from "../JournalItem/JournalItem";
+import pomp from "./../../assets/pom4.svg"
 
 
 function JournalList({ items }) {
 
+    let empty = <>
+    <p className="journal-list__empty">Здесь пока пусто</p>
+    <div className="pomp">
+    <img className="pom-r" src={pomp} alt="" />
+    <img className="pom-left" src={pomp} alt="" />
+    <img className="pom-r" src={pomp} alt="" />
+    <img className="pom-left" src={pomp} alt="" />
+    </div>
+    </>
+
     if (items.length === 0) {
-        return <p>Воспоминаний пока нет</p>;
+        return empty
     }
 
     const sortItems = (a, b) => {

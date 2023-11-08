@@ -1,16 +1,23 @@
 .card-button {
-    font-family: "Source Sans Pro";
-    border-radius: 3px;
-    background: rgba(255, 255, 255, 0.03);
-    display: block;
-    padding: 20px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.25s ease-in-out;
-    text-align: start;
-    width: 100%;
+    display: flex;
+    gap: 8px;
+    padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #ff8562;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #ff8562;
+    border-radius: 30px;
+    background-position: center center;
+    flex-wrap: wrap;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .card-button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background-color:hsl(13deg 100% 63% / 100%);
+    border-color: hsl(13deg 100% 66% / 100%);
 }

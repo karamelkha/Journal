@@ -1,23 +1,21 @@
 .button {
-    border-radius: 6px;
-    background-color: #312EB5;
-    padding: 8px 30px;
-    cursor: pointer;
-    transition: background 0.25s ease-in-out;
-    color: #FFF;
-    text-align: center;
-    font-family: "Source Sans Pro";
+    padding: 10px;
+    color: #fff;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    border: none;
+    font-family: 'WixMadeforDisplay',Arial,sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    background-position: center center;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: background 0.3s ease-in-out;
+    border: 3px solid #f9f6eb;
 }
 
 .accent:hover {
-    background: #222096;
+    background: hsl(227, 76%, 75%);
 }
 
 .accent {
-    background: #312EB5;
+    background: hsl(227, 76%, 67%);
 }

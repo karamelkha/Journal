@@ -1,26 +1,17 @@
-
 .journal-item__header {
     color: #fff;
-font-size: 18px;
-font-style: normal;
-font-weight: 600;
-line-height: 28px; 
+    font-size: 16px;
+   width: 100%;
 }
 
-.journal-item__body {
-    display: flex;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-}
 
 .journal-item__date {
-    color: rgba(255, 255, 255, 0.40);
+    color: hsl(0, 0%, 95%);
+    font-size: 12px;
 }
 
 .journal-item__text {
-    color: rgba(255, 255, 255, 0.60);
-    overflow: hidden;
-    
+color: #fff;
+font-size: 12px;
+color: hsl(0, 0%, 95%);
 }

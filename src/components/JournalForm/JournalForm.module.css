@@ -1,0 +1,35 @@
+
+.journal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.invalid {
+    background-color: hsl(227, 76%, 91%);
+}
+
+
+
+.journal-form>*::placeholder {
+    font-size: 14px;
+    color: hsl(227, 76%, 80%);
+    font-family: 'WixMadeforDisplay', Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+textarea,
+input {
+    padding: 10px;
+    font-family: 'WixMadeforDisplay', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #6a86eb;
+    background-color: #ffffff;
+    border: 3px solid #f9f6eb;
+    border-radius: 20px;
+    outline: none;
+} 
