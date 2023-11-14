@@ -1,18 +1,42 @@
-
 .journal-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-
-.invalid {
-    background-color: hsl(227, 76%, 91%);
+.form-wrapper,
+textarea {
+    border: 3px solid #f9f6eb;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    
 }
 
+.form-wrapper label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
 
+label>input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
 
-.journal-form>*::placeholder {
+.invalid {
+    /* background-color: hsl(227, 76%, 91%); */
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
     font-size: 14px;
     color: hsl(227, 76%, 80%);
     font-family: 'WixMadeforDisplay', Arial, sans-serif;
@@ -22,14 +46,10 @@
 
 textarea,
 input {
-    padding: 10px;
     font-family: 'WixMadeforDisplay', Arial, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.2;
     color: #6a86eb;
-    background-color: #ffffff;
-    border: 3px solid #f9f6eb;
-    border-radius: 20px;
-    outline: none;
-} 
+    cursor: text;
+}
