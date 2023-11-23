@@ -28,7 +28,7 @@ label>input {
 }
 
 .invalid {
-    /* background-color: hsl(227, 76%, 91%); */
+    background-color: hsl(227, 76%, 91%);
 }
 
 input[type=date]::-webkit-calendar-picker-indicator {
