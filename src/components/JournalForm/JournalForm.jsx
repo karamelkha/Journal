@@ -53,20 +53,23 @@ function JournalForm({ onSubmit }) {
         }
     }, [isFormReadyToSubmit, values, onSubmit]);
 
+    useEffect(() => {
+		dispatchForm({ type: 'SET_VALUE', payload: { userId }});
+	}, [userId]);
 
-    const onChange = (e) => {
-        dispatchForm({ type: 'SET_VALUE', payload: { [e.target.name]: e.target.value } });
-    };
+	const onChange = (e) => {
+		dispatchForm({ type: 'SET_VALUE', payload: { [e.target.name]: e.target.value }});
+	};
 
-    const addJournalItem = (e) => {
-        e.preventDefault();
-        dispatchForm({ type: 'SUBMIT' });
-    }
+	const addJournalItem = (e) => {
+		e.preventDefault();
+		dispatchForm({ type: 'SUBMIT' });
+	};
+
 
     return (
 
         <form className={styles['journal-form']} onSubmit={addJournalItem}>
-            {userId}
             <div className={styles['form-wrapper']}>
                 <label htmlFor="title">
                     <Input appearence="title" type='text' ref={titleRef} onChange={onChange} value={values.title} name='title' placeholder="Заголовок" isValid={!isValid.title} />

@@ -2,18 +2,21 @@ import "./JournalList.css"
 import CardButton from "../CardButton/CardButton";
 import JournalItem from "../JournalItem/JournalItem";
 import pomp from "./../../assets/pom4.svg"
+import { useContext } from "react";
+import { UserContext } from "../../context/user.context";
 
 
 function JournalList({ items }) {
+    const { userId } = useContext(UserContext)
 
     let empty = <>
-    <p className="journal-list__empty">Здесь пока пусто</p>
-    <div className="pomp">
-    <img className="pom-r" src={pomp} alt="" />
-    <img className="pom-left" src={pomp} alt="" />
-    <img className="pom-r" src={pomp} alt="" />
-    <img className="pom-left" src={pomp} alt="" />
-    </div>
+        <p className="journal-list__empty">Здесь пока пусто</p>
+        <div className="pomp">
+            <img className="pom-r" src={pomp} alt="" />
+            <img className="pom-left" src={pomp} alt="" />
+            <img className="pom-r" src={pomp} alt="" />
+            <img className="pom-left" src={pomp} alt="" />
+        </div>
     </>
 
     if (items.length === 0) {
@@ -29,15 +32,18 @@ function JournalList({ items }) {
     };
 
     return <>
-        {items.sort(sortItems).map(el => (
-            <CardButton key={el.id}>
-                <JournalItem
-                    title={el.title}
-                    text={el.text}
-                    date={el.date}
-                />
-            </CardButton>
-        ))}
+        {items
+            .filter(el => el.userId === userId)
+            .sort(sortItems)
+            .map(el => (
+                <CardButton key={el.id}>
+                    <JournalItem
+                        title={el.title}
+                        post={el.post}
+                        date={el.date}
+                    />
+                </CardButton>
+            ))}
     </>;
 
 
