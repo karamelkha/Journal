@@ -1,20 +1,15 @@
-import  styles from "./Header.module.css"
+import SelectUser from "../SelectUser/SelectUser"
+import styles from "./Header.module.css"
 
-function Header({changedUser}) {
+function Header() {
 
-  const changeUser = (e)=>{
-    console.log(e.target.value)
-  } 
 
-    return (
-      <>
+  return (
+    <>
       <h1 className={styles.header}>Мои заметки</h1>
-      <select name="user" id="user" onChange={changeUser}>
-        <option value="1">Ксю</option>
-        <option value="2">Кир</option>
-      </select>
-      </>
-    )
+      <SelectUser  />
+    </>
+  )
 }
 
 export default Header
