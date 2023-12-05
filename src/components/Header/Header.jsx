@@ -2,7 +2,7 @@ import SelectUser from '../SelectUser/SelectUser';
 import Logo from '../Logo/Logo';
 import styles from './Header.module.css'
 
-const logos = ['../public/assets/logo-1.png', '../public/assets/logo-2.png'];
+const logos = ['../public/assets/logo-1.svg', '../public/assets/logo-2.png'];
 
 function Header() {
 
