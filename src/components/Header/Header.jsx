@@ -1,15 +1,16 @@
-import SelectUser from "../SelectUser/SelectUser"
-import styles from "./Header.module.css"
+import SelectUser from '../SelectUser/SelectUser';
+import Logo from '../Logo/Logo';
+
+const logos = ['../public/assets/logo-1.png', '../public/assets/logo-2.png'];
 
 function Header() {
 
-
-  return (
-    <>
-      <h1 className={styles.header}>Мои заметки</h1>
-      <SelectUser  />
-    </>
-  )
+	return (
+		<>
+			<Logo image={logos[0]} />
+			<SelectUser />
+		</>
+	);
 }
 
-export default Header
+export default Header;
