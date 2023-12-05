@@ -4,7 +4,19 @@
     gap: 15px;
 }
 
-.form-wrapper,
+.form-row {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.form-row span{
+    color: #6a86eb;
+    line-height: 1;
+}
+
+input,
 textarea {
     border: 3px solid #f9f6eb;
     background-color: #ffffff;
@@ -15,7 +27,7 @@ textarea {
     
 }
 
-.form-wrapper label {
+.form-row label {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -35,6 +47,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
+
 input::placeholder,
 textarea::placeholder {
     font-size: 14px;
@@ -52,4 +65,16 @@ input {
     line-height: 1.2;
     color: #6a86eb;
     cursor: text;
+    flex: 1;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.archive {
+    width: 24px;
+    height: 24px;
 }

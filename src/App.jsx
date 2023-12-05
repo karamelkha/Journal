@@ -50,15 +50,19 @@ function App() {
 	return (
 		<UserContextProvider>
 			<div className='app'>
+				<Header />
+				<div className='layout'>
+
+			
 				<LeftPanel>
-					<Header/>
-					<JournalAddButton clearForm={() => setSelectedItem(null)}/>
+					<JournalAddButton clearForm={() => setSelectedItem(null)} />
 					<JournalList items={mapItems(items)} setItem={setSelectedItem} />
 				</LeftPanel>
 
 				<Body>
-				<JournalForm onSubmit={addItem} onDelete={deleteItem} data={selectedItem}/>
+					<JournalForm onSubmit={addItem} onDelete={deleteItem} data={selectedItem} />
 				</Body>
+			</div>
 			</div>
 		</UserContextProvider>
 	);

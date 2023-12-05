@@ -18,14 +18,15 @@ function JournalList({ items, setItem }) {
 		.filter(el => el.userId === userId)
 		.sort(sortItems), [items, userId]);
 
-		let empty = <> <p className="journal-list__empty">Здесь пока пусто</p>
+		let empty = <> 
+		<p className="journal-list__empty">Здесь пока пусто</p>
 		<div className="pomp">
-			<img className="pom-r" src='../public/assets/pom4.svg' alt="" />
-			<img className="pom-left" src='../public/assets/pom4.svg' alt="" />
-			<img className="pom-r" src='../public/assets/pom4.svg' alt="" />
-			<img className="pom-left" src='../public/assets/pom4.svg' alt="" />
-			
-		</div> </>
+			<img className="pom-r" src='/assets/pom4.svg' alt="" />
+			<img className="pom-left" src='/assets/pom4.svg' alt="" />
+			<img className="pom-r" src='/assets/pom4.svg' alt="" />
+			<img className="pom-left" src='/assets/pom4.svg' alt="" />
+		</div>
+		 </>
 
 	if (items.length === 0) {
 		return empty;

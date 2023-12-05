@@ -1,5 +1,22 @@
 .select {
-	padding: 10px;
-	background: none;
-	border: 1px solid #323232;
+    outline: none;
+	padding: 8px 10px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #ff8562;
+    font-size: 14px;
+    line-height: 1.55;
+	text-transform: uppercase;
+    border: 3px solid #ff8562;
+    border-radius: 30px;
+    background-position: center center;
+    flex-wrap: wrap;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
+
+.select:hover {
+    background-color: hsl(13deg 100% 63% / 100%);
+    border-color: hsl(13deg 100% 66% / 100%);
+}
+

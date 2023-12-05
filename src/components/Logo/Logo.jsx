@@ -1,4 +1,4 @@
-import styles from './Logo.css';
+import styles from './Logo.module.css';
 import { memo } from 'react';
 
 function Logo({ image }) {
